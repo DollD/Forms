@@ -1,0 +1,67 @@
+
+  <body>
+    
+     <div class="data-div" >
+        <form [formGroup] = "EmployeeForm">
+          <!-- Input Field for the First Name-->
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="First Name" formControlName = "firstName">
+          </mat-form-field>
+          <!--Input Field For the Last Name-->
+          <mat-form-field class="example-full-width">
+               <input matInput placeholder="Last Name" formControlName = "lastName">
+          </mat-form-field>
+          <!--Input Field For the Sur Name-->
+          <mat-form-field class="example-full-width">
+                <input matInput placeholder="Sur Name" formControlName = "surName">
+          </mat-form-field>
+          <!--This is For Radio Button for identifing the Gender !-->
+          <mat-radio-group formControlName = "gender"> Gender  &nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;  
+              <mat-radio-button value="Male">Male</mat-radio-button>
+              <mat-radio-button value="Female">Female</mat-radio-button>
+              <mat-radio-button value="Others">Other</mat-radio-button>
+          </mat-radio-group>
+          <!--THis is for Date Picker !-->
+          <!-- <mat-form-field>
+              <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field> -->
+          <br><br><br>
+          Education :
+          <mat-checkbox>SSC</mat-checkbox>
+          <mat-checkbox>Graduation</mat-checkbox>
+          <mat-checkbox>Post Graduation</mat-checkbox>
+         </form>
+     </div> 
+
+     
+                          
+        <!--This is the Data Binding Field !-->                                
+        <div class="binding">
+           {{EmployeeForm.value | json}}
+            <table>
+              <tbody>
+                <tr>
+                  <td>First Name : </td>
+                  <td>{{EmployeeForm.value.firstName}}</td>
+                </tr>
+                <tr>
+                    <td>Last Name : </td>
+                    <td>{{EmployeeForm.value.lastName}}</td>
+                  </tr>
+                  <tr>
+                      <td>Sur Name : </td>
+                      <td>{{EmployeeForm.value.surName}}</td>
+                    </tr>
+                    <tr>
+                        <td>Gender : </td>
+                        <td>{{EmployeeForm.value.gender}}</td>
+                      </tr>
+              </tbody>
+            </table>
+        </div>
+      
+      
+  </body>
+

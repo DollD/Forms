@@ -1,0 +1,46 @@
+body{
+    background-color: black;
+    margin-top :0px;
+}
+
+example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 33%;
+  }
+
+ .data-div{
+     width: auto;
+     height:300px;
+     background-color: aqua;
+     margin: 10%;
+     /* position: absolute; */
+     padding: 20px;
+     border-radius: 15px;
+ }
+ /* This is For Data Binding !*/
+ .binding{
+     height : auto;
+     background-color: azure;
+     margin: 32% 0% 0% 22%;
+     /* position:fixed; */
+     padding: 20px;
+     border-radius: 15px;
+ }
+
+ /* CSS For Radio Button !*/
+
+
+ mat-radio-button {
+    padding-right: 15%;
+  }
+
+  mat-checkbox{
+    padding-top: 15%;
+    padding-right: 15%;
+    margin : 10px;
+  }
